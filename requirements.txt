@@ -1,0 +1,31 @@
+# ============================================
+# PaperViz Translation Service（独立翻译微服务）
+# ⚠️ pdf2zh-next 使用 AGPL-3.0 协议
+# 本服务代码需符合其开源要求
+# ============================================
+
+# 核心翻译引擎（AGPL-3.0）
+pdf2zh-next[all]
+
+# Web 框架
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+
+# 异步任务队列
+celery[redis]>=5.3.0
+redis>=5.0.0
+
+# HTTP 客户端（同步，Celery Worker 中用于 Supabase/R2）
+httpx>=0.27.0
+
+# R2 / S3 存储
+boto3>=1.34.0
+
+# 环境变量
+python-dotenv>=1.0.0
+
+# 限流
+slowapi>=0.1.9
+
+# 数据校验（pdf2zh-next 也需要）
+pydantic>=2.0.0
